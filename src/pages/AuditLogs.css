@@ -1,0 +1,353 @@
+/* AuditLogs.css */
+
+.audit-content {
+    background-color: #fafbfc;
+}
+
+.mod-navbar-brand.blue-text {
+    color: #7c3aed;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-right: 2rem;
+}
+
+.action-btn {
+    background-color: #7c3aed !important;
+    border-radius: 0.25rem !important;
+}
+
+/* Filter Box */
+.audit-filter-box {
+    background-color: #f1f5f9;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #475569;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.filter-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    height: 40px;
+}
+
+.filter-input-wrap input {
+    border: none;
+    background: transparent;
+    width: 220px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    padding: 0 1rem;
+    outline: none;
+}
+
+.filter-input-wrap .input-icon {
+    color: #64748b;
+    margin-left: 1rem;
+}
+
+.filter-item.search-target-item .filter-input-wrap input {
+    width: 200px;
+    font-weight: 400;
+}
+
+.select-wrap select {
+    border: none;
+    background: transparent;
+    width: 180px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #334155;
+    padding: 0 2rem 0 1rem;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 0.75rem;
+    pointer-events: none;
+    color: #64748b;
+}
+
+.filter-item.align-bottom {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    padding-top: 1.25rem;
+}
+
+.reset-btn {
+    background-color: #e2e8f0;
+    color: #334155;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    height: 40px;
+    transition: all 0.2s;
+}
+
+.reset-btn:hover {
+    background-color: #cbd5e1;
+}
+
+/* Table container */
+.audit-table-card {
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+}
+
+/* Table */
+.audit-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.audit-table th {
+    text-align: left;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #64748b;
+    letter-spacing: 0.1em;
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #ffffff;
+}
+
+.audit-table td {
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #ffffff;
+    font-size: 0.85rem;
+    vertical-align: top;
+}
+
+.col-time {
+    width: 15%;
+    color: #0f172a;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.col-userid {
+    width: 15%;
+}
+
+.col-action {
+    width: 25%;
+}
+
+.col-ip {
+    width: 15%;
+}
+
+.col-status {
+    width: 15%;
+}
+
+.col-details {
+    width: 10%;
+    text-align: center;
+}
+
+.id-link {
+    color: #7c3aed;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+}
+
+.id-link.red {
+    color: #b91c1c;
+}
+
+.action-txt {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: #0f172a;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.action-txt .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.action-txt .dot.blue {
+    background-color: #7c3aed;
+}
+
+.action-txt .dot.green {
+    background-color: #10b981;
+}
+
+.action-txt .dot.gray {
+    background-color: #94a3b8;
+}
+
+.action-txt .dot.red {
+    background-color: #ef4444;
+}
+
+.action-txt .dot.orange {
+    background-color: #f59e0b;
+}
+
+.code-font {
+    font-family: 'Courier New', Courier, monospace;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.status-pill {
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+    display: inline-block;
+}
+
+.status-pill.green {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-pill.red {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-pill.orange {
+    background-color: #ffedd5;
+    color: #c2410c;
+}
+
+.detail-link {
+    color: #7c3aed;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4;
+    display: inline-block;
+}
+
+.detail-link:hover {
+    text-decoration: underline;
+}
+
+.detail-link.red {
+    color: #b91c1c;
+}
+
+/* Pagination */
+.audit-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.showing-text {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.pagination-group {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.page-btn {
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-btn.text {
+    border-color: #cbd5e1;
+}
+
+.page-btn.active-box {
+    background-color: #7c3aed;
+    color: white;
+    border-color: #7c3aed;
+}
+
+.page-btn-pure {
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Footer Adjustments */
+.audit-footer {
+    justify-content: space-between !important;
+    background: transparent;
+    border-top: none;
+    padding: 2rem 0;
+    margin: 0 2rem;
+}
+
+.left-foot {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.foot-brand {
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.right-foot a {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-decoration: none;
+}
