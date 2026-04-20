@@ -1,0 +1,236 @@
+/* Vanguard UI Design System - Master overrides */
+:root {
+  --royal-purple: #7c3aed;
+  --royal-dark: #6d28d9;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  
+  /* SHADOW STACKING SYSTEM */
+  --premium-shadow: 
+    0 2px 4px rgba(0,0,0,0.02),
+    0 10px 20px rgba(0,0,0,0.04),
+    0 20px 40px rgba(0,0,0,0.06);
+    
+  --glow-shadow: 0 0 25px rgba(124, 58, 237, 0.2);
+  
+  /* ANIMATION TOKENS */
+  --premium-ease: cubic-bezier(0.19, 1, 0.22, 1);
+  --bounce-ease: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+  font-family: 'Outfit', 'Inter', sans-serif !important;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.app-layout, .student-layout, .sup-layout, .mod-layout {
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+    #faf9ff !important;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ==============================================================
+   2. UNIFIED SIDEBARS (MAGNETIC UI)
+   ============================================================== */
+.sup-sidebar, .mod-sidebar {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px);
+  border-right: 1px solid var(--glass-border) !important;
+  width: 280px;
+  box-shadow: 10px 0 30px rgba(0,0,0,0.02);
+}
+
+.menu-item, .sidebar-menu-btn, .sup-menu-item, .mod-menu-item {
+  color: var(--text-muted) !important;
+  font-weight: 700 !important;
+  padding: 1rem 1.8rem !important;
+  margin: 0.2rem 1rem !important;
+  border-radius: 1rem !important;
+  border: none !important;
+  transition: all 0.3s var(--premium-ease) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item:hover, .sidebar-menu-btn:hover, .sup-menu-item:hover, .mod-menu-item:hover {
+  background: white !important;
+  color: var(--royal-purple) !important;
+  transform: translateX(5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+}
+
+.menu-item.active, .sidebar-menu-btn.active, .sup-menu-item.active, .mod-menu-item.active {
+  background: white !important;
+  color: var(--royal-purple) !important;
+  box-shadow: 0 15px 30px rgba(124, 58, 237, 0.1);
+}
+
+.menu-item.active::before, .sup-menu-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 50%;
+  width: 4px;
+  background: var(--royal-purple);
+  border-radius: 0 4px 4px 0;
+}
+
+/* ==============================================================
+   4. UNIFIED TOP NAVBAR (FLOATING GLASS)
+   ============================================================== */
+.top-navbar, .sup-top-nav, .mod-top-nav {
+  height: 80px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--glass-border) !important;
+  padding: 0 2rem !important;
+}
+
+/* ==============================================================
+   5. UNIFIED BUTTONS (KINETIC)
+   ============================================================== */
+.btn-primary, .submit-btn, .sup-save-btn, .mod-btn-primary, .action-btn {
+  background: var(--royal-purple) !important;
+  padding: 0.8rem 2rem !important;
+  border-radius: 1.25rem !important;
+  font-weight: 800 !important;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3) !important;
+  transition: all 0.3s var(--premium-ease) !important;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4) !important;
+}
+
+/* ==============================================================
+   8. DARK MODE (DEEP SPACE MESH)
+   ============================================================== */
+[data-theme='dark'] body, 
+[data-theme='dark'] .app-layout, 
+[data-theme='dark'] .sup-layout, 
+[data-theme='dark'] .mod-layout {
+  background: 
+    radial-gradient(circle at 10% 10%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(124, 58, 237, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, #0c0a1f 100%) !important;
+  background-color: #0c0a1f !important;
+}
+
+[data-theme='dark'] .glass-card, 
+[data-theme='dark'] .p-card, 
+[data-theme='dark'] .stat-card, 
+[data-theme='dark'] .sup-metric-card, 
+[data-theme='dark'] .mod-metric-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme='dark'] .sup-sidebar, 
+[data-theme='dark'] .mod-sidebar {
+  background: rgba(12, 10, 31, 0.8) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme='dark'] .menu-item:hover, 
+[data-theme='dark'] .sup-menu-item:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #fff !important;
+}
+
+[data-theme='dark'] .menu-item.active {
+  background: rgba(124, 58, 237, 0.15) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);
+}
+
+[data-theme='dark'] .glow-input, 
+[data-theme='dark'] .glow-select, 
+[data-theme='dark'] .glow-textarea {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+[data-theme='dark'] h1, 
+[data-theme='dark'] h2, 
+[data-theme='dark'] h3 {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .empty-table-row {
+  background-color: transparent !important;
+  color: #64748b !important;
+}
+
+[data-theme='dark'] .bg-orb {
+  filter: blur(120px) !important;
+  opacity: 0.4 !important;
+}
+
+/* ==============================================================
+   9. SETTINGS & PREFERENCES (Unified)
+   ============================================================== */
+.theme-toggle-group-p {
+  display: flex !important;
+  gap: 0.75rem !important;
+  margin-top: 0.5rem !important;
+}
+
+.theme-btn-p {
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  padding: 1rem !important;
+  background: white !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 0.75rem !important;
+  color: #64748b !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.theme-btn-p.active {
+  background: var(--primary-color) !important;
+  color: white !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 10px 20px var(--primary-glow) !important;
+  transform: translateY(-2px) !important;
+}
+
+[data-theme='dark'] .theme-btn-p {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #94a3b8 !important;
+}
+
+[data-theme='dark'] .theme-btn-p.active {
+  background: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+.glow-select-p {
+  transition: all 0.3s ease !important;
+}
+
+.glow-select-p:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 4px var(--primary-glow) !important;
+}
